@@ -57,6 +57,9 @@ const GameScreen = ({setIsPlaying}) => {
                 alert(message);
                 setBoard([0,0,0,0,0,0,0,0,0]);
                 console.log("Somebody won!")
+            } else if(numZeroes == 0){
+                alert("Tie!");
+                setBoard([0,0,0,0,0,0,0,0,0]);
             }
         }
     }
