@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Blank Template",
+    "name": "TicEdToe",
     "slug": "TicEdToe",
     "privacy": "public",
     "sdkVersion": "36.0.0",
@@ -25,6 +25,8 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": "A 1 hour game making challenge by DevEd in which I made tic tac toe in React Native",
+    "githubUrl": "https://github.com/Redseb/TicEdToe"
   }
 }

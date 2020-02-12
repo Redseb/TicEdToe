@@ -33,18 +33,27 @@ const GameScreen = ({setIsPlaying}) => {
 
     const isGameOver = (board, isRedTurn) => {
         console.log("Checking if somebody won");
+        let numZeroes = 0;
+        for(let i = 0; i < board.length; i++){
+            if(board[i] == 0){
+                numZeroes++;
+            }
+        }
         if(isRedTurn){
             let i = 2;
             let message = "Red Won!";
-            if((board[0] == i && board[1] == i && board[2] == i) || (board[3] == i && board[4] == i && board[5] == i) || (board[6] == i && board[7] == i && board[8] == i) || (board[0] == i && board[4] == i && board[8] == i) || (board[2] == i && board[4] == i && board[6] == i)){
+            if((board[2] == i && board[5] == i && board[8] == i)||(board[1] == i && board[4] == i && board[7] == i)||(board[0] == i && board[3] == i && board[6] == i) || (board[0] == i && board[1] == i && board[2] == i) || (board[3] == i && board[4] == i && board[5] == i) || (board[6] == i && board[7] == i && board[8] == i) || (board[0] == i && board[4] == i && board[8] == i) || (board[2] == i && board[4] == i && board[6] == i)){
                 alert(message);
                 setBoard([0,0,0,0,0,0,0,0,0]);
                 console.log("Somebody won!")
+            } else if(numZeroes == 0){
+                alert("Tie!");
+                setBoard([0,0,0,0,0,0,0,0,0]);
             }
         } else {
             let i = 1;
             let message = "Blue Won!";
-            if((board[0] == i && board[1] == i && board[2] == i) || (board[3] == i && board[4] == i && board[5] == i) || (board[6] == i && board[7] == i && board[8] == i) || (board[0] == i && board[4] == i && board[8] == i) || (board[2] == i && board[4] == i && board[6] == i)){
+            if((board[2] == i && board[5] == i && board[8] == i)||(board[1] == i && board[4] == i && board[7] == i)||(board[0] == i && board[3] == i && board[6] == i) || (board[0] == i && board[1] == i && board[2] == i) || (board[3] == i && board[4] == i && board[5] == i) || (board[6] == i && board[7] == i && board[8] == i) || (board[0] == i && board[4] == i && board[8] == i) || (board[2] == i && board[4] == i && board[6] == i)){
                 alert(message);
                 setBoard([0,0,0,0,0,0,0,0,0]);
                 console.log("Somebody won!")
