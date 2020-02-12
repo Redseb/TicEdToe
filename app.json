@@ -26,6 +26,10 @@
     "ios": {
       "supportsTablet": true
     },
+    "android": {
+      "package": "tic.ed.toe",
+      "versionCode": 1
+    },
     "description": "A 1 hour game making challenge by DevEd in which I made tic tac toe in React Native",
     "githubUrl": "https://github.com/Redseb/TicEdToe"
   }
